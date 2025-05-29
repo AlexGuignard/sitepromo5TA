@@ -5,6 +5,7 @@
 </div>
 <script>
   setInterval(()=>{
+    
     let a = parseFloat(document.getElementById("source").value)
     let b = parseFloat(document.getElementById("gpu").value) || 0
     let c = document.getElementById("target")
@@ -13,9 +14,8 @@
   },75);
 </script>
 <style>
-  label,a{
+  label{
     text-align-last:justify;
-    margin-top:1em;
   }
   div{
     display: flex;
@@ -26,5 +26,8 @@
     position: relative;
     padding: 1rem;
     text-align: center;
+  }
+  a{
+    margin-top:1em;
   }
 </style>
