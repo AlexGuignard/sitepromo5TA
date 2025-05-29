@@ -6,7 +6,7 @@
 <script>
   setInterval(()=>{
     let a = parseFloat(document.getElementById("source").value)
-    let b = parseFloat(document.getElementById("gpu").value)
+    let b = parseFloat(document.getElementById("gpu").value) || 0:
     let c = document.getElementById("target")
     c.value = " Prix avec -5% = "+((a - b)*.95) +  b
   },75);
