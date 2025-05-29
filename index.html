@@ -1,13 +1,14 @@
-<h1>Hellow World</h1><div style="display:flex;margin:auto;flex-direction:column;">
-<label>Total Config :  <input type="text" id="source"></label>
-<label>Prix GPU : <input type="text" id="gpu"></label>
-<a id="target"></a> 
+<div style="display:flex;margin:auto;flex-direction:column;">
+  <label>Total Config :  <input type="text" id="source"></label>
+  <label>Prix GPU : <input type="text" id="gpu"></label>
+  <a id="target"></a> 
 </div>
 <script>
   setInterval(()=>{
     let a = parseFloat(document.getElementById("source").value)
     let b = parseFloat(document.getElementById("gpu").value) || 0
     let c = document.getElementById("target")
-    c.innerHTML = " Prix avec -5% = " + ( a > 1000 ? (((a - b)*.95) +  b) : a)
+    let d = ( a > 1000 ? (((a - b)*.95) +  b) : a)
+    if(d != "NaN")c.innerHTML = " Prix avec -5% = " + d;
   },75);
 </script>
