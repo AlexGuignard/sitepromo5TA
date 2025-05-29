@@ -1,4 +1,4 @@
-<div style="display:flex;margin:auto;flex-direction:column;">
+<div style="">
   <label>Total Config :  <input type="text" id="source"></label>
   <label>Prix GPU : <input type="text" id="gpu"></label>
   <a id="target"></a> 
@@ -12,3 +12,19 @@
     if(d != 0)c.innerHTML = " Prix avec -5% = " + d;
   },75);
 </script>
+<style>
+  label,a{
+    text-align-last:justify;
+    margin-top:1em;
+  }
+  div{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: fit-content;
+    top: 35%;
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+  }
+</style>
