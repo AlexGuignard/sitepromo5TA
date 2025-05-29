@@ -1,6 +1,6 @@
-<h1>Hellow World</h1><div style="display:flex;margin:auto;">
-<input type="text" id="source">
-<input type="text" id="gpu">
+<h1>Hellow World</h1><div style="display:flex;margin:auto;flex-direction:columns;">
+<label>Total Config :  <input type="text" id="source"></label>
+<label>Prix GPU : <input type="text" id="gpu"></label>
 <a id="target"></a> 
 </div>
 <script>
@@ -8,6 +8,6 @@
     let a = parseFloat(document.getElementById("source").value)
     let b = parseFloat(document.getElementById("gpu").value) || 0
     let c = document.getElementById("target")
-    c.value = " Prix avec -5% = "+((a - b)*.95) +  b
+    c.innerHTML = " Prix avec -5% = " a > 1000 ? (((a - b)*.95) +  b) : a
   },75);
 </script>
