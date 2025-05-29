@@ -9,7 +9,11 @@
   setInterval(()=>{
     let a = parseFloat(document.getElementById("source").value)
     let b = parseFloat(document.getElementById("gpu").value) || 0
-    if(b>a)return;
+    if(b>a){
+      c.innerHTML = "";
+      d.innerHTML = "";
+      return;
+    }
     let c = document.getElementById("target")
     let d = document.getElementById("targetb")
     let e = ( a > 1000 ? (((a - b)*.95) +  b) : a) || 0
