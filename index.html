@@ -5,9 +5,9 @@
 </div>
 <script>
   setInterval(()=>{
-    let a = document.getElementById("source")
-    let b = document.getElementById("source")
-    let c = document.getElementById("source")
-    c.value = " Prix avec -5% = "+((a.value - b.value)*.95) +  b.value
+    let a = parseFloat(document.getElementById("source").value)
+    let b = parseFloat(document.getElementById("gpu").value)
+    let c = document.getElementById("target")
+    c.value = " Prix avec -5% = "+((a - b)*.95) +  b.value
   },75);
 </script>
