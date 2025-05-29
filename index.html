@@ -7,16 +7,16 @@
 </div>
 <script>
   setInterval(()=>{
-    
     let a = parseFloat(document.getElementById("source").value)
     let b = parseFloat(document.getElementById("gpu").value) || 0
+    if(b>a)return;
     let c = document.getElementById("target")
     let d = document.getElementById("targetb")
     let e = ( a > 1000 ? (((a - b)*.95) +  b) : a) || 0
     if( a == "" ) e = 0;
     if( e != 0 ) {
-      c.innerHTML = " Prix avec -5% = " + e;
-      d.innerHTML = a-e + "€ économisés";
+      c.innerHTML = " Prix avec -5% = " + e.toFixed(2);;
+      d.innerHTML = (a-e).toFixed(2); + "€ économisés";
     }
   },75);
 </script>
