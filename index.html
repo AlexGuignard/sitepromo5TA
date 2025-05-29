@@ -1,6 +1,6 @@
 <div style="">
-  <label>Total Config :  <input type="number" pattern="[0-9]" id="source"></label>
-  <label>Prix GPU : <input type="text" pattern="[0-9]" id="gpu"></label>
+  <label>Total Config :  <input type="number" id="source"></label>
+  <label>Prix GPU : <input type="number" id="gpu"></label>
   <a id="target"></a> 
 </div>
 <script>
@@ -10,6 +10,7 @@
     let b = parseFloat(document.getElementById("gpu").value) || 0
     let c = document.getElementById("target")
     let d = ( a > 1000 ? (((a - b)*.95) +  b) : a) || 0
+    if( a == "" ) d = 0;
     if(d != 0)c.innerHTML = " Prix avec -5% = " + d;
   },75);
 </script>
