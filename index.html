@@ -1,3 +1,13 @@
 <h1>Hellow World</h1><div style="display:flex;margin:auto;">
-<input type="text" id="source"><label id="target"></label> 
+<input type="text" id="source">
+<input type="text" id="gpu">
+<label id="target"></label> 
 </div>
+<script>
+  setInterval(()=>{
+    let a = document.getElementById("source")
+    let b = document.getElementById("source")
+    let c = document.getElementById("source")
+    c.value = " Prix avec -5% = "+((a.value - b.value)*.95) +  b.value
+  },75);
+</script>
