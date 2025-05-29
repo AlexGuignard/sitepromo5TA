@@ -8,7 +8,7 @@
     let a = parseFloat(document.getElementById("source").value)
     let b = parseFloat(document.getElementById("gpu").value) || 0
     let c = document.getElementById("target")
-    let d = ( a > 1000 ? (((a - b)*.95) +  b) : a)
-    if(d != "NaN")c.innerHTML = " Prix avec -5% = " + d;
+    let d = ( a > 1000 ? (((a - b)*.95) +  b) : a) || 0
+    if(d != 0)c.innerHTML = " Prix avec -5% = " + d;
   },75);
 </script>
