@@ -8,6 +8,6 @@
     let a = parseFloat(document.getElementById("source").value)
     let b = parseFloat(document.getElementById("gpu").value) || 0
     let c = document.getElementById("target")
-    c.innerHTML = " Prix avec -5% = " a > 1000 ? (((a - b)*.95) +  b) : a
+    c.innerHTML = " Prix avec -5% = " + ( a > 1000 ? (((a - b)*.95) +  b) : a)
   },75);
 </script>
