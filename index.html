@@ -1,5 +1,6 @@
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <title>Calcul promo Topachat</title>
-<div>
+<div id="container">
   <div id="divmain">
     <label>Total Config :  <input type="number" id="source"></label>
     <label>Prix GPU : <input type="number" id="gpu"></label>
@@ -7,6 +8,7 @@
     <a id="targetb"></a> 
   </div>
 </div>
+<button style="position:relative;top:10rem;margin:auto;" onclick="takeScreenshot()">Take Screenshot</button>
 <script>
   setInterval(()=>{
     let a = parseFloat(document.getElementById("source").value)
@@ -53,6 +55,13 @@ body {
   html{
     
   }
+  #container{
+    top: 15rem;
+    position: relative;
+    padding: 5rem;
+    width: fit-content;
+    margin: auto;
+  }
   #divmain{
     height:150px;
     display: flex;
@@ -88,3 +97,19 @@ body {
     }
   }
 </style>
+
+  <script>
+    function takeScreenshot() {
+      const element = document.getElementById("container");
+      html2canvas(element).then(canvas => {
+        // Optional: add to page
+        document.body.appendChild(canvas);
+
+        // OR: trigger download
+        const link = document.createElement("a");
+        link.download = "screenshot.png";
+        link.href = canvas.toDataURL();
+        link.click();
+      });
+    }
+  </script>
