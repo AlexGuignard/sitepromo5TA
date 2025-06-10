@@ -104,6 +104,7 @@ body {
       try {
         // render with backgrounds (default) and enable CORS for images if needed
         const canvas = await html2canvas(element, {
+          foreignObjectRendering : true,
           backgroundColor: null // keep element's CSS bg; change to a color if you want a solid fill
         });
 
