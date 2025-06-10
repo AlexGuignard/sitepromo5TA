@@ -1,9 +1,11 @@
 <title>Calcul promo Topachat</title>
-<div style="">
-  <label>Total Config :  <input type="number" id="source"></label>
-  <label>Prix GPU : <input type="number" id="gpu"></label>
-  <a id="target"></a> 
-  <a id="targetb"></a> 
+<div>
+  <div id="divmain">
+    <label>Total Config :  <input type="number" id="source"></label>
+    <label>Prix GPU : <input type="number" id="gpu"></label>
+    <a id="target"></a> 
+    <a id="targetb"></a> 
+  </div>
 </div>
 <script>
   setInterval(()=>{
@@ -51,7 +53,7 @@ body {
   html{
     
   }
-  div{
+  #divmain{
     height:150px;
     display: flex;
     margin: auto;
